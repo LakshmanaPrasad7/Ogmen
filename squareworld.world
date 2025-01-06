@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="square_world">
+    <!-- Include the default ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Include a light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <!-- Walls -->
+    <model name="wall_1">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>6 0.2 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>6 0.2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>0 3 0.25 0 0 0</pose>
+    </model>
+
+    <model name="wall_2">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>6 0.2 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>6 0.2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>0 -3 0.25 0 0 0</pose>
+    </model>
+
+    <model name="wall_3">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 6 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 6 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>3 0 0.25 0 0 0</pose>
+    </model>
+
+    <model name="wall_4">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 6 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 6 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>-3 0 0.25 0 0 0</pose>
+    </model>
+
+    <!-- Traffic cones -->
+    <include>
+      <uri>model://traffic_cone</uri>
+      <pose>2.5 2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://traffic_cone</uri>
+      <pose>-2.5 2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://traffic_cone</uri>
+      <pose>-2.5 -2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://traffic_cone</uri>
+      <pose>2.5 -2.5 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
+
